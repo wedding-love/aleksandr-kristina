@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -32,7 +33,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;   /* центрируем по вертикали */
+            justify-content: center;
             align-items: center;
             text-align: center;
             position: relative;
@@ -41,7 +42,6 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            /* padding-top удалён — центрирование без смещения */
         }
 
         .hero::before {
@@ -88,7 +88,7 @@
         /* Стрелка внизу — белая */
         .scroll-down {
             position: absolute;
-            bottom: 3rem;   /* комфортный отступ от низа */
+            bottom: 3rem;
             left: 50%;
             transform: translateX(-50%);
             cursor: pointer;
@@ -110,7 +110,7 @@
         .arrow-icon {
             width: 30px;
             height: 30px;
-            color: #ffffff;      /* явно белый цвет для currentColor */
+            color: #ffffff;
             stroke: #ffffff;
             stroke-width: 1.6;
             fill: none;
@@ -890,6 +890,7 @@
                     <label><input type="checkbox" name="drinks" value="Красное вино"> Красное вино</label>
                     <label><input type="checkbox" name="drinks" value="Водка"> Водка</label>
                     <label><input type="checkbox" name="drinks" value="Виски"> Виски</label>
+                    <label><input type="checkbox" name="drinks" value="Коньяк"> Коньяк</label>
                     <label><input type="checkbox" name="drinks" value="Безалкогольные напитки"> Безалкогольные напитки</label>
                 </div>
             </div>

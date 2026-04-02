@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -28,12 +27,12 @@
             width: 100%;
         }
 
-        /* Hero */
+        /* Hero — вертикальное центрирование */
         .hero {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;   /* центрируем по вертикали */
             align-items: center;
             text-align: center;
             position: relative;
@@ -42,7 +41,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding-top: 80px;
+            /* padding-top удалён — центрирование без смещения */
         }
 
         .hero::before {
@@ -78,18 +77,18 @@
             font-weight: 400;
             letter-spacing: 0.3rem;
             text-transform: uppercase;
-            margin-top: 0.25rem;
+            margin-bottom: 0.5rem;
         }
 
         @media (max-width: 768px) {
-            .hero { padding-top: 60px; }
             .names { font-size: 2.2rem; padding: 0 20px; }
             .hero-sub { font-size: 0.9rem; }
         }
 
+        /* Стрелка внизу — белая */
         .scroll-down {
             position: absolute;
-            bottom: 5rem;   /* подняли стрелку выше */
+            bottom: 3rem;   /* комфортный отступ от низа */
             left: 50%;
             transform: translateX(-50%);
             cursor: pointer;
@@ -111,6 +110,7 @@
         .arrow-icon {
             width: 30px;
             height: 30px;
+            color: #ffffff;      /* явно белый цвет для currentColor */
             stroke: #ffffff;
             stroke-width: 1.6;
             fill: none;
@@ -649,10 +649,9 @@
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            flex-wrap: wrap;      /* по умолчанию перенос */
+            flex-wrap: wrap;
             margin-bottom: 1.8rem;
         }
-        /* на экранах шире 800px — строго в одну строку */
         @media (min-width: 800px) {
             .couple-buttons {
                 flex-wrap: nowrap;
@@ -671,7 +670,7 @@
             transition: all 0.3s;
             background: #ffffff;
             border-radius: 28px;
-            flex: 1;            /* чтобы равномерно растягивались */
+            flex: 1;
         }
         .contact-btn:hover {
             border-color: #111111;
@@ -906,7 +905,7 @@
     </div>
 </section>
 
-<!-- Контакты: блоки в одну строку на широких экранах -->
+<!-- Контакты -->
 <section class="contacts-block fade-up">
     <div class="contacts-container">
         <h2 class="contacts-title">КОНТАКТЫ</h2>

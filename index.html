@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -88,7 +89,7 @@
 
         .scroll-down {
             position: absolute;
-            bottom: 2rem;
+            bottom: 5rem;   /* подняли стрелку выше */
             left: 50%;
             transform: translateX(-50%);
             cursor: pointer;
@@ -624,7 +625,7 @@
             display: none;
         }
 
-        /* Контакты — улучшенные рамки с номерами */
+        /* Контакты — блоки в одну строку на десктопе */
         .contacts-block {
             background: #ffffff;
             padding: clamp(3rem, 8vw, 5rem) 1.5rem;
@@ -648,8 +649,14 @@
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            flex-wrap: wrap;
+            flex-wrap: wrap;      /* по умолчанию перенос */
             margin-bottom: 1.8rem;
+        }
+        /* на экранах шире 800px — строго в одну строку */
+        @media (min-width: 800px) {
+            .couple-buttons {
+                flex-wrap: nowrap;
+            }
         }
         .contact-btn {
             display: flex;
@@ -664,6 +671,7 @@
             transition: all 0.3s;
             background: #ffffff;
             border-radius: 28px;
+            flex: 1;            /* чтобы равномерно растягивались */
         }
         .contact-btn:hover {
             border-color: #111111;
@@ -898,7 +906,7 @@
     </div>
 </section>
 
-<!-- Контакты с улучшенным отображением номеров телефонов -->
+<!-- Контакты: блоки в одну строку на широких экранах -->
 <section class="contacts-block fade-up">
     <div class="contacts-container">
         <h2 class="contacts-title">КОНТАКТЫ</h2>
